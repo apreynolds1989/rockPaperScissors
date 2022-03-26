@@ -34,3 +34,8 @@ let takeInput = () => {
 takeInput();
 
 console.log(playerChoice);
+
+// Print Both Choices to Console
+
+console.log(`Your Choice: ${playerChoice}`);
+console.log(`Computer's Choice: ${computerChoice}`);
