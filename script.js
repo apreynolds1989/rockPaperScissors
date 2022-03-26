@@ -21,3 +21,16 @@ function generateChoice() {
 
 generateChoice();
 console.log(computerChoice);
+
+// Take input from player and check to ensure it matches either rock, paper or scissors
+let playerChoice = '';
+let takeInput = () => {
+    playerChoice = prompt('Choose Rock, Paper or Scissors: ').toLowerCase();
+    if (playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors') {
+        takeInput();
+    };
+};
+
+takeInput();
+
+console.log(playerChoice);
