@@ -4,8 +4,6 @@ let computerChoice = '';
 
 function generateChoice() {
     const randomNum = Math.floor(Math.random() * 3) + 1;
-    console.log(randomNum);
-
     if (randomNum === 1) {
         computerChoice = 'rock';
         return computerChoice;
@@ -71,7 +69,7 @@ function compareChoices(choice1, choice2) {
     };
 };
 
-// Create a function to the game 5 times, showing the record after each round
+// Create a function to run the game 5 times, showing the record after each round
 
 function fiveRoundGame(func1, func2, func3) {
     for (let i = 0; i < 5; i++) {
