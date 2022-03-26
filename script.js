@@ -71,7 +71,7 @@ function compareChoices(choice1, choice2) {
 
 // Create a function to run the game 5 times, showing the record after each round
 
-function fiveRoundGame(func1, func2, func3) {
+/* function fiveRoundGame(func1, func2, func3) {
     for (let i = 0; i < 5; i++) {
         func1();
         func2();
@@ -82,4 +82,22 @@ function fiveRoundGame(func1, func2, func3) {
     };
 };
 
-fiveRoundGame(generateChoice, takeInput, compareChoices);
+fiveRoundGame(generateChoice, takeInput, compareChoices); */
+
+// Create an updated function to play until either the player or computer wins 5 games and Alert the winner at the end
+
+function firstToFive(func1, func2, func3) {
+    while (playerScore !== 5 && computerScore !== 5) {
+        func1();
+        func2();
+        console.log(`Your Choice: ${playerChoice}`);
+        console.log(`Computer's Choice: ${computerChoice}`);
+        func3(playerChoice, computerChoice);
+        (playerScore === 5) ?
+        alert('You win! Great Job!'):
+            (computerScore === 5) ? alert('Oh No! You Lost!') : console.log(`Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+    };
+};
+
+firstToFive(generateChoice, takeInput, compareChoices);
+console.log(`Final Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
