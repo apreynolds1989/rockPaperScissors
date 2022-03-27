@@ -34,36 +34,50 @@ let ties = 0;
 function compareChoices(choice1, choice2) {
     if (choice1 === choice2) {
         ties++;
-        alert(`Tie! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+        alert(`
+        Tie! You both picked ${playerChoice}!
+        Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
         console.log('Tie!');
     } else if (choice1 === 'rock') {
         if (choice2 === 'paper') {
             computerScore++;
-            alert(`Computer Wins! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+            alert(`
+            Computer Wins! ${computerChoice} beats ${playerChoice}!
+            Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
             console.log('Computer Wins!');
         } else {
             playerScore++;
-            alert(`You Win! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+            alert(`
+            You Win! ${playerChoice} beats ${computerChoice}!
+            Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
             console.log('You Win!');
         }
     } else if (choice1 === 'paper') {
         if (choice2 === 'scissors') {
             computerScore++;
-            alert(`Computer Wins! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+            alert(`
+            Computer Wins! ${computerChoice} beats ${playerChoice}!
+            Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
             console.log('Computer Wins!');
         } else {
             playerScore++;
-            alert(`You Win! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+            alert(`
+            You Win! ${playerChoice} beats ${computerChoice}!
+            Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
             console.log('You Win!');
         }
     } else {
         if (choice2 === 'rock') {
             computerScore++;
-            alert(`Computer Wins! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+            alert(`
+            Computer Wins! ${computerChoice} beats ${playerChoice}!
+            Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
             console.log('Computer Wins!');
         } else {
             playerScore++;
-            alert(`You Win! Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
+            alert(`
+            You Win! ${playerChoice} beats ${computerChoice}!
+            Current Record (W-L-T): ${playerScore}-${computerScore}-${ties}`);
             console.log('You Win!');
         }
     };
